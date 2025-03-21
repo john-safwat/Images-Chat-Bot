@@ -1,0 +1,17 @@
+icons_launcher:
+  image_path: "assets/images/app_logo_new_api_dark.png"
+  platforms:
+    android:
+      enable: true
+      image_path: "assets/images/app_logo_new_api_dark.png"
+      notification_image: "assets/images/app_logo_new_api_dark.png"
+      adaptive_background_image: "assets/images/app_logo_new_api_dark.png"
+      adaptive_foreground_image: "assets/images/app_logo_new_api_dark.png"
+      adaptive_round_image: "assets/images/app_logo_new_api_dark.png"
+      adaptive_monochrome_image: "assets/images/app_logo_new_api_dark.png"
+    ios:
+      enable: true
+      image_path: "assets/images/app_logo_ios_dark.png"
+      # For iOS 18+ (support dark and tinted)
+      dark_path: "assets/images/app_logo_ios_dark.png"
+      tinted_path: "assets/images/app_logo_ios_dark.png"
