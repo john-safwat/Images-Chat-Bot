@@ -1,3 +1,16 @@
 {
-  "appName" : "Chat bot"
+  "appName" : "Chat bot",
+  "selectLanguage" : "Select Language",
+  "done" : "Done",
+  "light" : "Light",
+  "dark" : "Dark",
+  "selectTheme" : "Select Theme",
+  "welcomeMessage" : "Hello in Imagine Ai Here You Can Draw and play Your Imaginations",
+  "letsStart" : "Let's Start",
+  "onBoardingTitle1" : "Unleash Your Creativity",
+  "onBoardingTitle2" : "AI-Powered Art at Your Fingertips",
+  "onBoardingTitle3" : "Share and Inspire",
+  "onBoardingDesc1" : "Transform your ideas into stunning images and videos with just a few words. Let your imagination run wild and watch it come to life!",
+  "onBoardingDesc2" : "Create unique visuals effortlessly with advanced AI technology. No design skills needed—just describe, and we’ll create.",
+  "onBoardingDesc3" : "Easily download and share your creations with the world. Spread your artistic vision and inspire others with your masterpieces."
 }

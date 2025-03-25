@@ -100,6 +100,84 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Chat bot'**
   String get appName;
+
+  /// No description provided for @selectLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Language'**
+  String get selectLanguage;
+
+  /// No description provided for @done.
+  ///
+  /// In en, this message translates to:
+  /// **'Done'**
+  String get done;
+
+  /// No description provided for @light.
+  ///
+  /// In en, this message translates to:
+  /// **'Light'**
+  String get light;
+
+  /// No description provided for @dark.
+  ///
+  /// In en, this message translates to:
+  /// **'Dark'**
+  String get dark;
+
+  /// No description provided for @selectTheme.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Theme'**
+  String get selectTheme;
+
+  /// No description provided for @welcomeMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Hello in Imagine Ai Here You Can Draw and play Your Imaginations'**
+  String get welcomeMessage;
+
+  /// No description provided for @letsStart.
+  ///
+  /// In en, this message translates to:
+  /// **'Let\'s Start'**
+  String get letsStart;
+
+  /// No description provided for @onBoardingTitle1.
+  ///
+  /// In en, this message translates to:
+  /// **'Unleash Your Creativity'**
+  String get onBoardingTitle1;
+
+  /// No description provided for @onBoardingTitle2.
+  ///
+  /// In en, this message translates to:
+  /// **'AI-Powered Art at Your Fingertips'**
+  String get onBoardingTitle2;
+
+  /// No description provided for @onBoardingTitle3.
+  ///
+  /// In en, this message translates to:
+  /// **'Share and Inspire'**
+  String get onBoardingTitle3;
+
+  /// No description provided for @onBoardingDesc1.
+  ///
+  /// In en, this message translates to:
+  /// **'Transform your ideas into stunning images and videos with just a few words. Let your imagination run wild and watch it come to life!'**
+  String get onBoardingDesc1;
+
+  /// No description provided for @onBoardingDesc2.
+  ///
+  /// In en, this message translates to:
+  /// **'Create unique visuals effortlessly with advanced AI technology. No design skills needed—just describe, and we’ll create.'**
+  String get onBoardingDesc2;
+
+  /// No description provided for @onBoardingDesc3.
+  ///
+  /// In en, this message translates to:
+  /// **'Easily download and share your creations with the world. Spread your artistic vision and inspire others with your masterpieces.'**
+  String get onBoardingDesc3;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

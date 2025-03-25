@@ -46,7 +46,7 @@ class MyApp extends StatelessWidget {
       supportedLocales: AppLocalizations.supportedLocales,
       locale: Locale(appConfigProvider.getLocal()),
       initialRoute: AppRouts.onboarding,
-      routes: {AppRouts.onboarding: (_) => const OnboardingView()},
+      routes: {AppRouts.onboarding: (_) => OnboardingView()},
     );
   }
 }
