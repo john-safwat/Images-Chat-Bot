@@ -178,6 +178,330 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Easily download and share your creations with the world. Spread your artistic vision and inspire others with your masterpieces.'**
   String get onBoardingDesc3;
+
+  /// No description provided for @youAreJustOneStepAway.
+  ///
+  /// In en, this message translates to:
+  /// **'You Are Just One Step Away'**
+  String get youAreJustOneStepAway;
+
+  /// No description provided for @login.
+  ///
+  /// In en, this message translates to:
+  /// **'Login'**
+  String get login;
+
+  /// No description provided for @register.
+  ///
+  /// In en, this message translates to:
+  /// **'Register'**
+  String get register;
+
+  /// No description provided for @email.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get email;
+
+  /// No description provided for @password.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get password;
+
+  /// No description provided for @forget_password.
+  ///
+  /// In en, this message translates to:
+  /// **'Forget Password?'**
+  String get forget_password;
+
+  /// No description provided for @dont_have_account.
+  ///
+  /// In en, this message translates to:
+  /// **'Don’t Have Account?'**
+  String get dont_have_account;
+
+  /// No description provided for @create_account.
+  ///
+  /// In en, this message translates to:
+  /// **'Create Account'**
+  String get create_account;
+
+  /// No description provided for @or.
+  ///
+  /// In en, this message translates to:
+  /// **'Or'**
+  String get or;
+
+  /// No description provided for @login_with_google.
+  ///
+  /// In en, this message translates to:
+  /// **'Login With Google'**
+  String get login_with_google;
+
+  /// No description provided for @name_cannot_be_empty.
+  ///
+  /// In en, this message translates to:
+  /// **'Name cannot be empty'**
+  String get name_cannot_be_empty;
+
+  /// No description provided for @name_min_length.
+  ///
+  /// In en, this message translates to:
+  /// **'Name must be at least 2 characters long'**
+  String get name_min_length;
+
+  /// No description provided for @name_max_length.
+  ///
+  /// In en, this message translates to:
+  /// **'Name cannot be longer than 50 characters'**
+  String get name_max_length;
+
+  /// No description provided for @name_invalid_chars.
+  ///
+  /// In en, this message translates to:
+  /// **'Name can only contain letters and spaces'**
+  String get name_invalid_chars;
+
+  /// No description provided for @emailCannotBeEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'Email cannot be empty'**
+  String get emailCannotBeEmpty;
+
+  /// No description provided for @enterValidEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Enter a valid email address'**
+  String get enterValidEmail;
+
+  /// No description provided for @password_empty_error.
+  ///
+  /// In en, this message translates to:
+  /// **'Please enter a password'**
+  String get password_empty_error;
+
+  /// No description provided for @password_length_error.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must be at least 8 characters'**
+  String get password_length_error;
+
+  /// No description provided for @password_uppercase_error.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must contain at least one uppercase letter'**
+  String get password_uppercase_error;
+
+  /// No description provided for @password_lowercase_error.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must contain at least one lowercase letter'**
+  String get password_lowercase_error;
+
+  /// No description provided for @password_number_error.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must contain at least one number'**
+  String get password_number_error;
+
+  /// No description provided for @password_special_error.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must contain at least one special character (!@#\$&*~)'**
+  String get password_special_error;
+
+  /// No description provided for @confirm_password_empty_error.
+  ///
+  /// In en, this message translates to:
+  /// **'Please confirm your password'**
+  String get confirm_password_empty_error;
+
+  /// No description provided for @password_match_error.
+  ///
+  /// In en, this message translates to:
+  /// **'Passwords do not match'**
+  String get password_match_error;
+
+  /// No description provided for @name.
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get name;
+
+  /// No description provided for @alreadyHaveAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Already Have Account?'**
+  String get alreadyHaveAccount;
+
+  /// No description provided for @rePassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Re-Password'**
+  String get rePassword;
+
+  /// No description provided for @forgetPasswordMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Forget Your Password , Don’t Worry Enter Your Email and We Will Send Reset password Email TO Your Mail'**
+  String get forgetPasswordMessage;
+
+  /// No description provided for @resetPassword.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset Password'**
+  String get resetPassword;
+
+  /// No description provided for @creatingAccount.
+  ///
+  /// In en, this message translates to:
+  /// **'Creating Your Account ...'**
+  String get creatingAccount;
+
+  /// No description provided for @accountCreatedSuccessfully.
+  ///
+  /// In en, this message translates to:
+  /// **'Account Created Successfully'**
+  String get accountCreatedSuccessfully;
+
+  /// No description provided for @socketExceptionMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'There seems to be a problem with your internet connection. Please check your network settings and try again.'**
+  String get socketExceptionMessage;
+
+  /// No description provided for @timeoutExceptionMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'The request took too long to complete. Please try again later or check your internet connection.'**
+  String get timeoutExceptionMessage;
+
+  /// No description provided for @httpExceptionMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong on the server side. Please try again later or contact our support team.'**
+  String get httpExceptionMessage;
+
+  /// No description provided for @formatExceptionMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'There was an issue with the data received from the server. Please try again later or contact our support team.'**
+  String get formatExceptionMessage;
+
+  /// No description provided for @ioExceptionMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'There was a problem with the network connection.'**
+  String get ioExceptionMessage;
+
+  /// No description provided for @dioConnectTimeoutMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'We\'re having trouble connecting to the server. Please try again later or check your internet connection.'**
+  String get dioConnectTimeoutMessage;
+
+  /// No description provided for @dioResponseMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'The server returned an unexpected response. Please try again later or contact our support team.'**
+  String get dioResponseMessage;
+
+  /// No description provided for @dioDefaultMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Oops! Something went wrong. Please try again later.'**
+  String get dioDefaultMessage;
+
+  /// No description provided for @dioConnectionTimeoutMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'The connection to the server timed out. Please check your internet connection or try again later.'**
+  String get dioConnectionTimeoutMessage;
+
+  /// No description provided for @dioSendTimeoutMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'The request timed out while sending data. Please check your internet connection or try again later.'**
+  String get dioSendTimeoutMessage;
+
+  /// No description provided for @dioReceiveTimeoutMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'The request timed out while waiting for a response from the server. Please check your internet connection or try again later.'**
+  String get dioReceiveTimeoutMessage;
+
+  /// No description provided for @dioBadCertificateMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'The server\'s security certificate is not trusted. Please ensure you\'re using a secure connection or contact our support team.'**
+  String get dioBadCertificateMessage;
+
+  /// No description provided for @dioBadResponseMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Unauthorized access. Please check your credentials or log in again.'**
+  String get dioBadResponseMessage;
+
+  /// No description provided for @dioCancelMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'The request was cancelled. Please try again or contact our support team if the issue persists.'**
+  String get dioCancelMessage;
+
+  /// No description provided for @dioConnectionErrorMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'There was a connection error. Please check your internet connection or try again later.'**
+  String get dioConnectionErrorMessage;
+
+  /// No description provided for @dioUnknownMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'An unknown error occurred. Please try again later or contact our support team.'**
+  String get dioUnknownMessage;
+
+  /// No description provided for @ok.
+  ///
+  /// In en, this message translates to:
+  /// **'Ok'**
+  String get ok;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @tryAgain.
+  ///
+  /// In en, this message translates to:
+  /// **'Try Again'**
+  String get tryAgain;
+
+  /// No description provided for @loggingIn.
+  ///
+  /// In en, this message translates to:
+  /// **'Logging You in ...'**
+  String get loggingIn;
+
+  /// No description provided for @sendingEmail.
+  ///
+  /// In en, this message translates to:
+  /// **'Sending Email ...'**
+  String get sendingEmail;
+
+  /// No description provided for @loginSuccess.
+  ///
+  /// In en, this message translates to:
+  /// **'Login Success'**
+  String get loginSuccess;
+
+  /// No description provided for @resetPasswordEmailSent.
+  ///
+  /// In en, this message translates to:
+  /// **'Reset Password Email Sent'**
+  String get resetPasswordEmailSent;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -1,0 +1,2 @@
+/Users/johnsafwat/Desktop/app codes/chat_bot/android/app/.cxx/RelWithDebInfo/1d4j6m4w/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/johnsafwat/Desktop/app codes/chat_bot/android/app/.cxx/RelWithDebInfo/1d4j6m4w/armeabi-v7a/CMakeFiles/rebuild_cache.dir

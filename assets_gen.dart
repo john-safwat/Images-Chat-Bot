@@ -1,7 +1,10 @@
 import 'dart:io';
 
 void main() {
-  const String assetsDir = "assets/images";
+  const List<String> assetDirs = [
+    "assets/images",
+    "assets/animations"
+  ];
   const String outputFile = "lib/gen/assets.dart";
 
   final buffer = StringBuffer();
@@ -9,17 +12,18 @@ void main() {
   buffer.writeln("// Run `dart generate_assets.dart` to regenerate.");
   buffer.writeln("\nclass Assets {");
 
-  final directory = Directory(assetsDir);
-  if (directory.existsSync()) {
-    final files = directory.listSync().whereType<File>();
-    for (var file in files) {
-      final fileName = file.uri.pathSegments.last;
-      final variableName = _toCamelCase(fileName.split('.').first);
-      buffer.writeln("  static const String $variableName = '$assetsDir/$fileName';");
+  for (var dir in assetDirs) {
+    final directory = Directory(dir);
+    if (directory.existsSync()) {
+      final files = directory.listSync().whereType<File>();
+      for (var file in files) {
+        final fileName = file.uri.pathSegments.last;
+        final variableName = _toCamelCase(fileName.split('.').first);
+        buffer.writeln("  static const String $variableName = '$dir/$fileName';");
+      }
+    } else {
+      print("❌ Directory '$dir' not found!");
     }
-  } else {
-    print("❌ Directory '$assetsDir' not found!");
-    return;
   }
 
   buffer.writeln("}\n");
