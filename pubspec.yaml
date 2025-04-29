@@ -31,7 +31,8 @@ dependencies:
   lottie:
   fluttertoast:
   cherry_toast:
-
+  no_screenshot:
+  cloud_firestore:
 
 dev_dependencies:
   flutter_test:

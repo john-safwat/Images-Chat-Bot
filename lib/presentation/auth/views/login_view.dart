@@ -50,7 +50,7 @@ class _LoginViewState extends State<LoginView> {
               context: context,
               posActionTitle: AppLocalizations.of(context)!.ok,
               posAction: () {
-                Navigator.pop(context);
+                Navigator.pushReplacementNamed(context, AppRouts.home);
               },
             );
           } else if (state.loginState is BaseFailState) {

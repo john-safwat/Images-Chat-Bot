@@ -66,5 +66,12 @@
   "loggingIn": "جاري تسجيل دخولك ...",
   "sendingEmail": "إرسال البريد الإلكتروني ...",
   "loginSuccess": "تم تسجيل الدخول بنجاح",
-  "resetPasswordEmailSent" : "إعادة تعيين كلمة المرور تم إرسال البريد الإلكتروني"
+  "resetPasswordEmailSent" : "إعادة تعيين كلمة المرور تم إرسال البريد الإلكتروني",
+  "homeScreenMessage" : "ما الذي يدور في ذهنك الآن",
+  "message": "الرسالة",
+  "logout": "تسجيل الخروج",
+  "theme" : "الوضع",
+  "language" : "اللغة",
+  "chats" : "الدردشات",
+  "newChat" : "دردشة جديدة"
 }

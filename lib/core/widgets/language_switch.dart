@@ -30,7 +30,7 @@ class LanguageSwitch extends StatelessWidget {
         }
       },
       onChanged: (p0) => localProvider.isEn()? localProvider.changeLocal("ar"):localProvider.changeLocal("en"),
-      borderWidth: 2,
+      borderWidth: 1,
     );
   }
 }

@@ -211,4 +211,25 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get resetPasswordEmailSent => 'Reset Password Email Sent';
+
+  @override
+  String get homeScreenMessage => 'What’s In Your Mind Now';
+
+  @override
+  String get message => 'Message';
+
+  @override
+  String get logout => 'Logout';
+
+  @override
+  String get theme => 'Theme';
+
+  @override
+  String get language => 'Language';
+
+  @override
+  String get chats => 'Chats';
+
+  @override
+  String get newChat => 'New Chat';
 }

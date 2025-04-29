@@ -66,5 +66,12 @@
   "loggingIn" :"Logging You in ...",
   "sendingEmail" : "Sending Email ...",
   "loginSuccess" : "Login Success",
-  "resetPasswordEmailSent" : "Reset Password Email Sent"
+  "resetPasswordEmailSent" : "Reset Password Email Sent",
+  "homeScreenMessage" : "What’s In Your Mind Now",
+  "message": "Message",
+  "logout": "Logout",
+  "theme" : "Theme",
+  "language" : "Language",
+  "chats" : "Chats",
+  "newChat" : "New Chat"
 }

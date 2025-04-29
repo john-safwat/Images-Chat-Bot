@@ -9,9 +9,12 @@ import 'package:chat_bot/presentation/action_selection/action_selection_view.dar
 import 'package:chat_bot/presentation/auth/views/forget_password_view.dart';
 import 'package:chat_bot/presentation/auth/views/login_view.dart';
 import 'package:chat_bot/presentation/auth/views/register_view.dart';
+import 'package:chat_bot/presentation/home/home_view.dart';
 import 'package:chat_bot/presentation/onboarding/onboarding_view.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:no_screenshot/no_screenshot.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -30,14 +33,25 @@ void main() async {
   );
 }
 
+final _noScreenshot = NoScreenshot.instance;
+
+Future<void> disableScreenshot() async {
+  await _noScreenshot.screenshotOff();
+}
+
 Future<void> configureApp() async {
   SharedPreferences preferences = getIt<SharedPreferences>();
   String local =
       preferences.getString(Constants.localeKey) ?? Constants.enLocaleKey;
   bool isDark = preferences.getBool(Constants.themeKey) ?? true;
   getIt<AppConfigProvider>().changeLocal(local);
-  getIt<AppConfigProvider>()
-      .changeTheme(isDark ? ThemeMode.dark : ThemeMode.light);
+  getIt<AppConfigProvider>().changeTheme(
+    isDark ? ThemeMode.dark : ThemeMode.light,
+  );
+  if (FirebaseAuth.instance.currentUser != null) {
+    getIt<AppConfigProvider>().setUser(FirebaseAuth.instance.currentUser!);
+  }
+  await disableScreenshot();
 }
 
 var navigatorKey = GlobalKey<NavigatorState>();
@@ -55,21 +69,18 @@ class MyApp extends StatelessWidget {
       theme: lightTheme.theme,
       darkTheme: darkTheme.theme,
       themeMode: appConfigProvider.getTheme(),
-      themeAnimationStyle: AnimationStyle(
-        curve: Curves.easeInOut,
-        duration: const Duration(milliseconds: 500),
-      ),
       debugShowCheckedModeBanner: false,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       locale: Locale(appConfigProvider.getLocal()),
-      initialRoute: AppRouts.onboarding,
+      initialRoute:appConfigProvider.user != null ? AppRouts.home : AppRouts.onboarding,
       routes: {
         AppRouts.onboarding: (_) => OnboardingView(),
         AppRouts.actionSelection: (_) => ActionSelectionView(),
         AppRouts.login: (_) => const LoginView(),
         AppRouts.register: (context) => const RegisterView(),
         AppRouts.forgetPassword: (context) => const ForgetPasswordView(),
+        AppRouts.home: (context) => const HomeView(),
       },
     );
   }

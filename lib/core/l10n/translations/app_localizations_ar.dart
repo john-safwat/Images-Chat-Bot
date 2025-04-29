@@ -211,4 +211,25 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get resetPasswordEmailSent => 'إعادة تعيين كلمة المرور تم إرسال البريد الإلكتروني';
+
+  @override
+  String get homeScreenMessage => 'ما الذي يدور في ذهنك الآن';
+
+  @override
+  String get message => 'الرسالة';
+
+  @override
+  String get logout => 'تسجيل الخروج';
+
+  @override
+  String get theme => 'الوضع';
+
+  @override
+  String get language => 'اللغة';
+
+  @override
+  String get chats => 'الدردشات';
+
+  @override
+  String get newChat => 'دردشة جديدة';
 }
