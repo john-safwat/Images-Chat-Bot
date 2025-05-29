@@ -4,6 +4,7 @@ import 'package:chat_bot/core/l10n/translations/app_localizations.dart';
 import 'package:chat_bot/core/providers/app_config_provider.dart';
 import 'package:chat_bot/core/routes/app_routs.dart';
 import 'package:chat_bot/core/theme/app_theme.dart';
+import 'package:chat_bot/core/utils/app_initialization.dart';
 import 'package:chat_bot/firebase_options.dart';
 import 'package:chat_bot/presentation/action_selection/action_selection_view.dart';
 import 'package:chat_bot/presentation/auth/views/forget_password_view.dart';
@@ -14,7 +15,6 @@ import 'package:chat_bot/presentation/onboarding/onboarding_view.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:no_screenshot/no_screenshot.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -33,12 +33,6 @@ void main() async {
   );
 }
 
-final _noScreenshot = NoScreenshot.instance;
-
-Future<void> disableScreenshot() async {
-  await _noScreenshot.screenshotOff();
-}
-
 Future<void> configureApp() async {
   SharedPreferences preferences = getIt<SharedPreferences>();
   String local =
@@ -51,7 +45,7 @@ Future<void> configureApp() async {
   if (FirebaseAuth.instance.currentUser != null) {
     getIt<AppConfigProvider>().setUser(FirebaseAuth.instance.currentUser!);
   }
-  await disableScreenshot();
+
 }
 
 var navigatorKey = GlobalKey<NavigatorState>();
@@ -65,6 +59,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     appConfigProvider = Provider.of(context);
+    getIt<AppInitialization>().initApp();
+
     return MaterialApp(
       theme: lightTheme.theme,
       darkTheme: darkTheme.theme,

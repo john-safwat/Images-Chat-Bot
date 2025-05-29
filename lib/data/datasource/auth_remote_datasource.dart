@@ -53,13 +53,14 @@ class AuthRemoteDatasource {
     return response;
   }
 
-  Future<Results<User>> googleLogin()async{
+  Future<Results<User>> googleLogin() async {
     var response = await dataSourceExecution.execute(() async {
       // Trigger the authentication flow
       final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
 
       // Obtain the auth details from the request
-      final GoogleSignInAuthentication? googleAuth = await googleUser?.authentication;
+      final GoogleSignInAuthentication? googleAuth =
+          await googleUser?.authentication;
 
       // Create a new credential
       final credential = GoogleAuthProvider.credential(
@@ -68,10 +69,15 @@ class AuthRemoteDatasource {
       );
 
       // Once signed in, return the UserCredential
-      UserCredential userCredential =await FirebaseAuth.instance.signInWithCredential(credential);
+      UserCredential userCredential =
+          await FirebaseAuth.instance.signInWithCredential(credential);
 
       return Success(userCredential.user);
     });
     return response;
+  }
+
+  Future<void> logOut() async {
+    await auth.signOut();
   }
 }

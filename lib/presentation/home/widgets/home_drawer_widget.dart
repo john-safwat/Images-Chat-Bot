@@ -1,9 +1,12 @@
 import 'package:animate_do/animate_do.dart';
+import 'package:chat_bot/core/di/di.dart';
 import 'package:chat_bot/core/extentions/number_ext.dart';
 import 'package:chat_bot/core/l10n/translations/app_localizations.dart';
+import 'package:chat_bot/core/routes/app_routs.dart';
 import 'package:chat_bot/core/theme/app_colors.dart';
 import 'package:chat_bot/core/widgets/language_switch.dart';
 import 'package:chat_bot/core/widgets/theme_switch.dart';
+import 'package:chat_bot/data/datasource/auth_remote_datasource.dart';
 import 'package:flutter/material.dart';
 
 class HomeDrawerWidget extends StatelessWidget {
@@ -20,10 +23,8 @@ class HomeDrawerWidget extends StatelessWidget {
             children: [
               SlideInUp(
                 child: ZoomIn(
-                  child: Text(
-                    AppLocalizations.of(context)!.chats,
-                    style: Theme.of(context).textTheme.titleLarge,
-                  ),
+                  child: Text(AppLocalizations.of(context)!.chats,
+                      style: Theme.of(context).textTheme.titleLarge),
                 ),
               ),
               SlideInUp(child: ZoomIn(child: const Divider())),
@@ -65,10 +66,14 @@ class HomeDrawerWidget extends StatelessWidget {
               SlideInUp(
                 child: ZoomIn(
                   child: FilledButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      getIt<AuthRemoteDatasource>().logout();
+                      Navigator.pushReplacementNamed(context, AppRouts.login);
+                    },
                     style: FilledButton.styleFrom(
-                        backgroundColor: AppColors.red,
-                        foregroundColor: AppColors.white),
+                      backgroundColor: AppColors.red,
+                      foregroundColor: AppColors.white,
+                    ),
                     child: Text(
                       AppLocalizations.of(context)!.logout,
                     ),

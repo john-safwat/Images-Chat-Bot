@@ -232,4 +232,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get newChat => 'New Chat';
+
+  @override
+  String get youMustSelectSubject => 'You must select a subject';
 }

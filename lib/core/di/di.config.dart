@@ -1,3 +1,4 @@
+// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 // **************************************************************************
@@ -8,17 +9,27 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
+import 'package:dio/dio.dart' as _i361;
 import 'package:firebase_auth/firebase_auth.dart' as _i59;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
+import 'package:logger/logger.dart' as _i974;
+import 'package:pretty_dio_logger/pretty_dio_logger.dart' as _i528;
 import 'package:shared_preferences/shared_preferences.dart' as _i460;
 
 import '../../data/datasource/auth_remote_datasource.dart' as _i126;
+import '../../data/datasource/history_datasource.dart' as _i546;
+import '../../data/datasource/images_api_datasource.dart' as _i850;
 import '../../presentation/auth/view_model/auth_view_model.dart' as _i594;
+import '../../presentation/home/view_model/home_view_model.dart' as _i304;
 import '../datasource_execution/datasource_execution.dart' as _i166;
+import '../l10n/translations/app_localizations.dart' as _i641;
 import '../providers/app_config_provider.dart' as _i56;
+import '../utils/app_initialization.dart' as _i828;
 import '../utils/validators.dart' as _i885;
+import 'modules/dio_module.dart' as _i983;
 import 'modules/firebase_auth_module.dart' as _i222;
+import 'modules/logger_module.dart' as _i205;
 import 'modules/shared_preferences_module.dart' as _i813;
 
 extension GetItInjectableX on _i174.GetIt {
@@ -33,6 +44,8 @@ extension GetItInjectableX on _i174.GetIt {
       environmentFilter,
     );
     final sharedPreferencesModule = _$SharedPreferencesModule();
+    final dioModule = _$DioModule();
+    final loggerModule = _$LoggerModule();
     final firebaseAuthModule = _$FirebaseAuthModule();
     await gh.factoryAsync<_i460.SharedPreferences>(
       () => sharedPreferencesModule.sharedPreferences,
@@ -40,8 +53,21 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factory<_i166.DataSourceExecution>(() => _i166.DataSourceExecution());
     gh.singleton<_i56.AppConfigProvider>(() => _i56.AppConfigProvider());
+    gh.singleton<_i828.AppInitialization>(() => _i828.AppInitialization());
+    gh.singleton<_i546.HistoryDatasource>(() => _i546.HistoryDatasource());
+    gh.lazySingleton<_i361.Dio>(() => dioModule.provideDio());
+    gh.lazySingleton<_i528.PrettyDioLogger>(
+        () => dioModule.providePrettyDioLogger());
+    gh.lazySingleton<_i974.Logger>(() => loggerModule.getLogger());
     gh.lazySingleton<_i59.FirebaseAuth>(
         () => firebaseAuthModule.provideFirebaseAuth());
+    gh.singleton<_i850.ImagesApiDatasource>(
+        () => _i850.ImagesApiDatasource(gh<_i361.Dio>()));
+    gh.factory<_i304.HomeViewModel>(() => _i304.HomeViewModel(
+          gh<_i850.ImagesApiDatasource>(),
+          gh<_i546.HistoryDatasource>(),
+          gh<_i641.AppLocalizations>(),
+        ));
     gh.factory<_i885.Validators>(
         () => _i885.Validators(gh<_i56.AppConfigProvider>()));
     gh.factory<_i126.AuthRemoteDatasource>(() => _i126.AuthRemoteDatasource(
@@ -58,5 +84,9 @@ extension GetItInjectableX on _i174.GetIt {
 }
 
 class _$SharedPreferencesModule extends _i813.SharedPreferencesModule {}
+
+class _$DioModule extends _i983.DioModule {}
+
+class _$LoggerModule extends _i205.LoggerModule {}
 
 class _$FirebaseAuthModule extends _i222.FirebaseAuthModule {}

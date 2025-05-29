@@ -544,6 +544,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'New Chat'**
   String get newChat;
+
+  /// No description provided for @youMustSelectSubject.
+  ///
+  /// In en, this message translates to:
+  /// **'You must select a subject'**
+  String get youMustSelectSubject;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

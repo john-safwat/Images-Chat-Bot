@@ -73,5 +73,6 @@
   "theme" : "Theme",
   "language" : "Language",
   "chats" : "Chats",
-  "newChat" : "New Chat"
+  "newChat" : "New Chat",
+  "youMustSelectSubject" : "You must select a subject"
 }

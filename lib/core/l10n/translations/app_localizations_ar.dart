@@ -232,4 +232,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get newChat => 'دردشة جديدة';
+
+  @override
+  String get youMustSelectSubject => 'يجب عليك اختيار الموضوع';
 }

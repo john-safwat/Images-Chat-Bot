@@ -73,5 +73,6 @@
   "theme" : "الوضع",
   "language" : "اللغة",
   "chats" : "الدردشات",
-  "newChat" : "دردشة جديدة"
+  "newChat" : "دردشة جديدة",
+  "youMustSelectSubject" : "يجب عليك اختيار الموضوع"
 }

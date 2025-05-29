@@ -1,4 +1,3 @@
-
 import 'package:chat_bot/core/constants/constants.dart';
 import 'package:chat_bot/core/di/di.dart';
 import 'package:chat_bot/core/l10n/translations/app_localizations.dart';
@@ -15,13 +14,17 @@ class AppConfigProvider extends ChangeNotifier {
 
   User? user;
 
-  void setUser(User user){
+  void setUser(User user) {
     this.user = user;
     notifyListeners();
   }
 
   Future<void> changeLocal(String newLocal) async {
     locale = await AppLocalizations.delegate.load(Locale(newLocal));
+    if (getIt.isRegistered<AppLocalizations>()) {
+      getIt.unregister<AppLocalizations>();
+    }
+    getIt.registerSingleton<AppLocalizations>(locale);
     if (newLocal == _currentLocal) {
       return;
     }
@@ -45,14 +48,15 @@ class AppConfigProvider extends ChangeNotifier {
     return _currentLocal == Constants.enLocaleKey;
   }
 
-  bool isDark(){
+  bool isDark() {
     return _themeMode == ThemeMode.dark;
   }
+
   String getLocal() {
     return _currentLocal;
   }
 
-  ThemeMode getTheme (){
+  ThemeMode getTheme() {
     return _themeMode;
   }
 }
